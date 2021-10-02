@@ -7,7 +7,7 @@ import io.ktor.http.*
 import io.ktor.response.*
 import io.ktor.routing.*
 
-private const val BASE_Url = "http://192.168.1.5:8100"
+private const val BASE_Url = "http://localhost:8100"
 private val image = listOf(
     Image("gambar satu" , "gambar keren" , "$BASE_Url/rabbits/satu.jpg" , "senin 2021"),
     Image("gambar dua" , "gambar kece" , "$BASE_Url/rabbits/dua.jpg", "selasa 2021"),
