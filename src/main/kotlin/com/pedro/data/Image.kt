@@ -8,6 +8,7 @@ import kotlinx.serialization.Serializable
 data class Image(
     val name : String,
     val description : String,
-    val img_Url : String
+    val img_Url : String,
+    val date : String
 
 )
