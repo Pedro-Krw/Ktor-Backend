@@ -5,21 +5,13 @@ val logback_version: String by project
 plugins {
     application
     kotlin("jvm") version "1.5.31"
-                id("org.jetbrains.kotlin.plugin.serialization") version "1.5.31"
 }
 
-group = "com.pedro"
+group = "com.example"
 version = "0.0.1"
 application {
     mainClass.set("io.ktor.server.netty.EngineMain")
 }
-
-
-
-tasks.create("stage") {
-    dependsOn("installDist")
-}
-
 
 repositories {
     mavenCentral()
@@ -27,7 +19,7 @@ repositories {
 
 dependencies {
     implementation("io.ktor:ktor-server-core:$ktor_version")
-    implementation("io.ktor:ktor-serialization:$ktor_version")
+    implementation("io.ktor:ktor-gson:$ktor_version")
     implementation("io.ktor:ktor-server-host-common:$ktor_version")
     implementation("io.ktor:ktor-server-netty:$ktor_version")
     implementation("ch.qos.logback:logback-classic:$logback_version")
